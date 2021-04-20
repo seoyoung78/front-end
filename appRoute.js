@@ -36,7 +36,10 @@ angular.module("app") // 생성된 모듈 구성
             .when("/exam24_builtin_service/boards", {templateUrl: "views/exam24_builtin_service/boards.html", controller: "exam24Controller"})
             .when("/exam24_builtin_service/boards/:bno", {templateUrl: "views/exam24_builtin_service/boards.html", controller: "exam24Controller"})     //bno: 경로 변수(path 변수)
 
-            .when("/exam25_http_products", {templateUrl: "views/exam24_builtin_service/boards.html", controller: "exam24Controller"})
+            .when("/exam25_http_products", {templateUrl: "views/exam25_http_products/list.html", controller: "exam25Controller"})
+            .when("/exam25_http_products/:pid", {templateUrl: "views/exam25_http_products/read.html", controller: "exam25Controller"})
+            
+            .when("/exam26_http_boards", {templateUrl: "views/exam26_http_boards/index.html", controller: "exam26Controller"})
 
             .otherwise({redirectTo: "/"});  //요청되지 않은 경로로 호출 될 경우 경로 지정
     }); 
