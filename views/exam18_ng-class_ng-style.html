@@ -1,0 +1,30 @@
+<style>
+  .custom-class {
+    background-color: orange;
+  }
+</style>
+
+<div class="card">
+    <div class="card-header">
+      exam18_ng-class_ng-style
+    </div>
+
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Action</th>
+            <th>Done</th>
+          </tr>
+        </thead>
+        <tr ng-repeat="item in todos" ng-class-odd="'custom-class'">   <!-- 상태데이터로 클리스명 지정 : 변경 가능 / '클래스명' : 고정 -->
+        <!-- <tr ng-repeat="item in todos" ng-class-odd="customClass"></tr> -->
+        <!-- <tr ng-repeat="item in todos" ng-class-odd="{'custom-class' : status === true}"></tr> -->
+          <td>{{$index + 1}}</td>
+          <td>{{item.action}}</td>
+          <td ng-style="{'color': customColor, 'font-size':'2rem'}">{{item.complete}}</td>
+        </tr>
+      </table>
+    </div>
+</div>
