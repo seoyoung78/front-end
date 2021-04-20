@@ -14,14 +14,14 @@
                     <th>제목</th>
                     <th>글쓴이</th>
                     <th>날짜</th>
-                         <th>조회수</th>
+                    <th>조회수</th>
                 </tr>
                 <tr ng-repeat="board in boards">
                     <td>{{board.bno}}</td>
                     <td><a ng-click="read(board.bno)" href="">{{board.btitle}}</a></td>
                     <td>{{board.bwriter}}</td>
                     <td>{{board.bdate | date:"yyyy.MM.dd"}}</td>
-                         <td>{{board.bhitcount}}</td>
+                    <td>{{board.bhitcount}}</td>
                 </tr>
                    <tr>
                       <td colspan="5" style="text-align: center;">
