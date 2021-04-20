@@ -17,6 +17,21 @@ angular.module("app")
 
       battachUrl: function(bno) {
         return BASE_URL + "/battach/" + bno;
+      },
+
+      create: function(formData) {
+        const promise = $http.post(BASE_URL, formData, {headers: {"Content-Type":undefined}});  //Body에 들어갈 형식을 헤더에서 정의 - multipart 형식으로 입력되어야 하기 때문 / default는 JSON
+        return promise;
+      },
+
+      update: function(formData) {
+        const promise = $http.put(BASE_URL, formData, {headers: {"Content-Type":undefined}});
+        return promise;
+      },
+
+      delete: function(bno) {
+        const promise = $http.delete(BASE_URL + "/" + bno);
+        return promise;
       }
     };
   });

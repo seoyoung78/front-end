@@ -24,8 +24,8 @@
                 </a>
             </div>
             <button class="btn btn-primary btn-sm" ng-click="getList(pager.pageNo)">목록</button>
-            <button class="btn btn-primary btn-sm" ng-click="updateBoardForm()">수정</button> 
-            <button class="btn btn-primary btn-sm" ng-click="deleteBoard(board.bno)">삭제</button>       
+            <button ng-show="uid===board.bwriter" class="btn btn-primary btn-sm" ng-click="updateBoardForm()">수정</button> 
+            <button ng-show="uid===board.bwriter" class="btn btn-primary btn-sm" ng-click="deleteBoard(board.bno)">삭제</button>       
         </div>
     </div>
 </div>
